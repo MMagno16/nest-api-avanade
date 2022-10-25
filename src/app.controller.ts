@@ -1,0 +1,23 @@
+import { Controller, Get } from '@nestjs/common';
+import { AppService } from './app.service';
+
+@Controller('users')
+export class AppController {
+  // injeção de dependencia
+  constructor(private readonly appService: AppService) {}
+
+  @Get()
+  getHello(): string {
+    return this.appService.getHello();
+  }
+
+  @Get('login')
+  getLogin(): string {
+    return this.appService.getLogin();
+  }
+  @Get('register')
+  getRegister(): string {
+    return this.appService.getRegister();
+  }
+}
+
