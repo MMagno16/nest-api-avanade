@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "user-select",
+          "-moz-appearance",
+          "scrollbar-color",
+          "-webkit-overflow-scrolling"
+        ]
+      }
+    ],
+    "typescript-config/strict": "off",
+    "typescript-config/consistent-casing": "off",
+    "css-prefix-order": "off"
+  }
+}
