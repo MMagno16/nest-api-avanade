@@ -41,6 +41,7 @@ export class EmailService {
         <h1>${msg}</h1>
         Somente especialistas.`,
     };
+    
 
     try {
       const result = await transporter.sendMail(mailOptions);
