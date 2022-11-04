@@ -1,14 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { AuthService } from './auth/auth.service';
 
 describe('AppController', () => {
   let appController: AppController;
 
-  beforeEach(async () => {
+  beforeEach(async () => { //simulando a compilação do módulo
     const app: TestingModule = await Test.createTestingModule({
       controllers: [AppController],
-      providers: [AppService],
+      providers: [AppService, AuthService],
     }).compile();
 
     appController = app.get<AppController>(AppController);
@@ -20,3 +21,5 @@ describe('AppController', () => {
     });
   });
 });
+
+//it ou test - é o método que executa o teste
